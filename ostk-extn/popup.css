@@ -1,0 +1,48 @@
+body {
+	width: 400px;
+	font-family: 'Lucida Grande', 'Segoe UI', 'Helvetica', 'Arial';
+}
+.thumbnail {
+	width: 100px;
+}
+.productName {
+	font-size: 0.8em;
+}
+a {
+	color: #3080C8;
+}
+#headA {
+	text-decoration: none;
+	color: white;
+}
+#head {
+	background-color: #c7202c;
+	padding: 5px 5px 5px 15px;
+	border-radius: 5px;
+}
+#head:hover {
+	cursor: pointer;
+	background-color: #d0202c;
+	box-shadow: 0 0 5px #555;
+}
+.price {
+	color: #c7202c;
+}
+.save {
+	color: green;
+}
+#other {
+	color: #c7202c;
+}
+td {
+	padding-left: 15px;
+}
+hr {
+	color: white;
+}
+#search {
+	border: none;
+	position: relative;
+	left: 10%;
+	width: 40%;
+}

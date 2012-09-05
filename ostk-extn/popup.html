@@ -1,0 +1,55 @@
+<html>
+<head>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	<script src="popup.js">	</script>
+	<link href="popup.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<div id="body">
+			<div id="head">
+				<a href="http://www.o.co" target="_blank" id="headA">
+				Overstock.com Deals
+				</a>
+				<input id="search" placeholder="Search Overstock.com" type="search" />
+			</div>
+		<table id="main">
+			<tr>
+				<td rowspan="3">
+					<a href="http://www.overstock.com/deal-of-the-day" target="_blank"><img id="dodImage" class="thumbnail"/></a>
+				</td>
+				<td>
+					<a href="http://www.overstock.com/deal-of-the-day" target="_blank"><span id="dodProductName" class="productName"></span></a>
+				</td>
+			</tr>
+			<tr><td>
+				<span id="dodPrice" class="price"></span>
+			</td></tr>
+			<tr><td class="save">
+				<span id="dodSave"></span>
+			</td></tr>
+			<!-- Next -->
+			<tr>
+				<td rowspan="4">
+					<a href="http://www.overstock.com/buzz-buy" target="_blank"><img id="buzzImage" class="thumbnail"/></a>
+				</td>
+				<td>
+					<a href="http://www.overstock.com/buzz-buy" target="_blank"><span id="buzzProductName" class="productName"></span></a>
+				</td>
+			</tr>
+			<tr><td>
+				<span id="buzzPrice" class="price"></span>
+			</td></tr>
+			<tr><td class="save">
+				<span id="buzzSave"></span>
+			</td></tr>
+			<tr><td>
+				<img id="buzz-buy-image" />
+			</td></tr>
+		</table>
+	</div>
+	<div id="foot">
+		<a href="http://www.overstock.com/sales" id="other" target="_blank">Other awesome deals..</a>
+	</div>
+
+</body>
+</html>

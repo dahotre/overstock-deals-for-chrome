@@ -1,0 +1,16 @@
+{
+  "name": "Overstock.com deals",
+  "version": "1.2",
+  "manifest_version": 2,
+  "description": "Deals at Overstock.com",
+  "icons": { "128": "icon_128.png" },
+  "background" : {
+    "scripts": ["date.js", "background.js"]
+  },
+  "permissions": [ "cookies", "http://www.dahotre.com/downloads/OverstockDeals_updates.xml", "http://www.overstock.com/"],
+  "browser_action": {
+    "default_title": "Overstock.com Deals",
+    "default_icon": "icon_19.png",
+    "default_popup": "popup.html"
+  }
+}
