@@ -1,4 +1,4 @@
 Overstock.com Chrome extension
 ==========================
 
-Chrome extension repo for my implementation of Overstock.com deals
+My implementation of a Chrome extension for deals on  Overstock.com
