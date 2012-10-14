@@ -1,55 +1,90 @@
 <html>
 <head>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-	<script src="popup.js">	</script>
-	<link href="popup.css" rel="stylesheet" type="text/css" />
+  <script src="jquery.min.js"></script>
+  <script src="popup.js"></script>
+  <link href="popup.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-	<div id="body">
-			<div id="head">
-				<a href="http://www.o.co" target="_blank" id="headA">
-				Overstock.com Deals
-				</a>
-				<input id="search" placeholder="Search Overstock.com" type="search" />
-			</div>
-		<table id="main">
-			<tr>
-				<td rowspan="3">
-					<a href="http://www.overstock.com/deal-of-the-day" target="_blank"><img id="dodImage" class="thumbnail"/></a>
-				</td>
-				<td>
-					<a href="http://www.overstock.com/deal-of-the-day" target="_blank"><span id="dodProductName" class="productName"></span></a>
-				</td>
-			</tr>
-			<tr><td>
-				<span id="dodPrice" class="price"></span>
-			</td></tr>
-			<tr><td class="save">
-				<span id="dodSave"></span>
-			</td></tr>
-			<!-- Next -->
-			<tr>
-				<td rowspan="4">
-					<a href="http://www.overstock.com/buzz-buy" target="_blank"><img id="buzzImage" class="thumbnail"/></a>
-				</td>
-				<td>
-					<a href="http://www.overstock.com/buzz-buy" target="_blank"><span id="buzzProductName" class="productName"></span></a>
-				</td>
-			</tr>
-			<tr><td>
-				<span id="buzzPrice" class="price"></span>
-			</td></tr>
-			<tr><td class="save">
-				<span id="buzzSave"></span>
-			</td></tr>
-			<tr><td>
-				<img id="buzz-buy-image" />
-			</td></tr>
-		</table>
-	</div>
-	<div id="foot">
-		<a href="http://www.overstock.com/sales" id="other" target="_blank">Other awesome deals..</a>
-	</div>
+  <div id="body">
+    <div id="head">
+      Overstock.com Deals
+      <input id="search" placeholder="Search Overstock.com" type="search" />
+    </div>
 
-</body>
-</html>
+    <table id="main">
+      <tr id="dodRow">
+        <td rowspan="3">
+          <a href="http://www.overstock.com/deal-of-the-day" target="_blank"><img id="dodImage" class="thumbnail"/></a>
+        </td>
+        <td>
+          <a href="http://www.overstock.com/deal-of-the-day" target="_blank"><span id="dodProductName" class="productName"></span></a>
+        </td>
+      </tr>
+      <tr><td>
+        <img id="dodLogo" src="dodLogo.jpg"/>
+      </td></tr>
+      <tr><td>
+        <span id="dodPrice" class="price"></span><br />
+        <span id="dodSave" class="save"></span>
+      </td></tr>
+
+      <tr id="clubOLogoRow">
+        <td colspan="2">Reward Yourself for Shopping<a href="http://www.overstock.com/club-o-rewards-program" target="_blank"><img id="clubOlogoImg" src="clubOlogo.jpg" alt="Club O rewards"></a></td
+        </tr>
+
+        <tr id="clubORow">
+          <td colspan="2">
+            <div class="coProd" id="coProd0">
+              <a href="http://www.overstock.com/club-o-exclusives#tab0" target="_blank">
+                <img class="coImg" id="coImg0">
+              </a>
+              <div class="coDetails" id="coDetails0">
+                <a href="http://www.overstock.com/club-o-exclusives#tab0" target="_blank"><span class="coTitle" id="coTitle0"></span></a><br />
+                <span class="coPrice" id="coPrice0"></span><br />
+                <span class="coBack" id="coBack0"></span>
+              </div>
+            </div>
+            <div class="coProd" id="coProd1">
+              <a href="http://www.overstock.com/club-o-exclusives#tab1" target="_blank">
+                <img class="coImg" id="coImg1">
+              </a>
+              <div class="coDetails" id="coDetails1">
+                <a href="http://www.overstock.com/club-o-exclusives#tab1" target="_blank"><span class="coTitle" id="coTitle1"></span></a><br />
+                <span class="coPrice" id="coPrice1"></span><br />
+                <span class="coBack" id="coBack1"></span>
+              </div>
+            </div>
+            <div class="coProd" id="coProd2">
+              <a href="http://www.overstock.com/club-o-exclusives#tab2" target="_blank">
+                <img class="coImg" id="coImg2">
+              </a>
+              <div class="coDetails" id="coDetails2">
+                <a href="http://www.overstock.com/club-o-exclusives#tab2" target="_blank"><span class="coTitle" id="coTitle2"></span></a><br />
+                <span class="coPrice" id="coPrice2"></span><br />
+                <span class="coBack" id="coBack2"></span>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr id="omailRow">
+          <td colspan="2">
+            <div class="omailDesc">
+              <a href="http://www.overstock.com/omail" target="_blank"><img src="omail.gif" alt="Sign up for Omail today" id="omailImg" /></a>
+            </div>
+            <div class="omailDesc">
+              <ul>Receive special benefits 
+                <li>Exlusive Coupons</li>
+                <li>Promotion Notifications</li> 
+                <li>Personalized Recommendations</li>
+              </ul>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div id="foot">
+      <a href="http://www.overstock.com/sales" id="other" target="_blank">Other awesome deals..</a>
+    </div>
+
+  </body>
+  </html>

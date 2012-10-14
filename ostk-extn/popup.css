@@ -1,48 +1,91 @@
 body {
-	width: 400px;
-	font-family: 'Lucida Grande', 'Segoe UI', 'Helvetica', 'Arial';
+  width: 400px;
+  font-family: 'Lucida Grande', 'Segoe UI', 'Helvetica', 'Arial';
+}
+#main {
+  width: 390px;
 }
 .thumbnail {
-	width: 100px;
+  width: 100px;
 }
 .productName {
-	font-size: 0.8em;
+  font-size: 0.8em;
 }
 a {
-	color: #3080C8;
-}
-#headA {
-	text-decoration: none;
-	color: white;
+  color: #3080C8;
 }
 #head {
-	background-color: #c7202c;
-	padding: 5px 5px 5px 15px;
-	border-radius: 5px;
+  background-color: #c7202c;
+  padding: 5px 5px 5px 15px;
+  border-radius: 5px;
+  color: white;
 }
 #head:hover {
-	cursor: pointer;
-	background-color: #d0202c;
-	box-shadow: 0 0 5px #555;
+  cursor: pointer;
+  background-color: #d0202c;
+  box-shadow: 0 0 5px #555;
 }
 .price {
-	color: #c7202c;
+  color: #c7202c;
 }
 .save {
-	color: green;
+  color: green;
+  font-size: 0.9em;
 }
 #other {
-	color: #c7202c;
+  color: #c7202c;
 }
 td {
-	padding-left: 15px;
+  padding-left: 15px;
 }
 hr {
-	color: white;
+  color: white;
 }
 #search {
-	border: none;
-	position: relative;
-	left: 10%;
-	width: 40%;
+  border: none;
+  position: relative;
+  left: 10%;
+  width: 40%;
+}
+#dodLogo {
+ max-height: 2em; 
+ display: none;
+}
+#clubOLogoRow {
+  background-color : #EFEDE1;
+  color: #c7202c;
+}
+#clubOlogoImg {
+  max-height: 2em;
+}
+#clubORow {
+  background-color: #F5F3EB;
+}
+.coProd {
+  max-width: 120px;
+  float: left;
+}
+.coImg {
+  max-width: 75px;
+}
+.coTitle, .coPrice {
+  font-size: 0.7em;
+}
+.coBack {
+  font-size: 0.8em;
+  color: green;
+}
+#omailRow {
+  background-color: #F3F3F3;
+  font-size: 0.8em;
+}
+.omailDesc {
+  float: left;
+  max-width: 220px;
+}
+.omailDesc li {
+  font-size: 0.75em;
+}
+#omailImg {
+  max-height: 4em;
 }

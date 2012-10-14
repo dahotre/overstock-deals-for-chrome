@@ -1,43 +1,60 @@
-jQuery(function($){
-	$.getJSON("http://www.dahotre.com/deals.json",
-	function(data) {
-		$.each(data, function(key, val){
-			if (key=='dodImage') {
-				$("#dodImage").attr("src", val);
-			}
-			else if(key=="dodTitle") {
-				$("#dodProductName").html(val);
-			}
-			else if(key=="dodSave") {
-				$("#dodSave").html(val);
-			}
-			else if(key=="dodPrice") {
-				$("#dodPrice").html(val);
-			}
-			else if (key=='buzzImage') {
-				$("#buzzImage").attr("src", val);
-			}
-			else if(key=="buzzTitle") {
-				$("#buzzProductName").html(val);
-				$("#buzz-buy-image").attr("src", "http://ak2.ostkcdn.com/images/mxc/120711_buzz_buy_icon.png");
-				$('.separator').append("<hr />");
-			}
-			else if(key=="buzzSave") {
-				$("#buzzSave").html('Possible Extra Rewards: ' + val +'%');
-			}
-			else if(key=="buzzPrice") {
-				$("#buzzPrice").html(val);
-			}
-		});
-	});
+$(document).ready(function(){
 
-	$('#preloader').remove();
+  $.get("http://www.overstock.com/deal-of-the-day", function(data) {
+    var dodContainer = $(data).find('#deal-of-the-day');
+    var dodTitle = $(dodContainer).find('h1').text();
+    var dodImgSrc = $(dodContainer).find('.prod-image img').attr('src');
+    var dodSave = $(dodContainer).find('.prod-compare').text();
+    var dodPrice = $(dodContainer).find('.prod-holder h2>span').first().text();
+    $("#dodProductName").html(dodTitle);
+    $("#dodImage").attr("src", dodImgSrc);
+    $("#dodSave").html(dodSave);
+    $("#dodPrice").html(dodPrice);
+    if (dodProductName != null) {
+      $('#dodLogo').css('display', 'block');
+    }
+  });
 
-	$("#search").keypress(function(e) {
-		if(e.keyCode == 13) {
-			chrome.tabs.create({'url':"http://www.overstock.com/search?keywords=" + $(this).val()});
-		}
-	});
+  $("#search").keypress(function(e) {
+    if(e.keyCode == 13) {
+      chrome.tabs.create({'url':"http://www.overstock.com/search?keywords=" + $(this).val()});
+    }
+  });
+
+  $.get("http://www.overstock.com/club-o-exclusives", function(data) {
+    var coContainer = $(data).find('#club-o-deals-tabbed');
+
+    var tab = $(coContainer).find('#tab0 ul.product-layout li.product').first();
+    var coImg = $(tab).find('.pro-thumb img').attr('src');
+    var coTitle = $(tab).find('.pro-name').text();
+    var coPrice = $(tab).find('.price strong').text();
+    var coBack = $(tab).find('.rewards strong').text();
+    $('#coImg0').attr('src', coImg);
+    $('#coTitle0').html(coTitle);
+    $('#coPrice0').html(coPrice);
+    $('#coBack0').html('Earn ' + coBack);
+
+    var tab = $(coContainer).find('#tab1 ul.product-layout li.product').first();
+    var coImg = $(tab).find('.pro-thumb img').attr('src');
+    var coTitle = $(tab).find('.pro-name').text();
+    var coPrice = $(tab).find('.price strong').text();
+    var coBack = $(tab).find('.rewards strong').text();
+    $('#coImg1').attr('src', coImg);
+    $('#coTitle1').html(coTitle);
+    $('#coPrice1').html(coPrice);
+    $('#coBack1').html('Earn ' + coBack);
+
+    var tab = $(coContainer).find('#tab2 ul.product-layout li.product').first();
+    var coImg = $(tab).find('.pro-thumb img').attr('src');
+    var coTitle = $(tab).find('.pro-name').text();
+    var coPrice = $(tab).find('.price strong').text();
+    var coBack = $(tab).find('.rewards strong').text();
+    $('#coImg2').attr('src', coImg);
+    $('#coTitle2').html(coTitle);
+    $('#coPrice2').html(coPrice);
+    $('#coBack2').html('Earn ' + coBack);
+
+  });
 
 });
 
