@@ -89,3 +89,8 @@ hr {
 #omailImg {
   max-height: 4em;
 }
+#noClubORow, #noDod {
+  display: none;
+  font-size: 0.8em;
+  color:gray;
+}
