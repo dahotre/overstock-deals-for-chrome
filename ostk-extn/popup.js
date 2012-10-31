@@ -35,30 +35,36 @@ $(document).ready(function(){
       var coTitle = $(tab).find('.pro-name').text();
       var coPrice = $(tab).find('.price strong').text();
       var coBack = $(tab).find('.rewards strong').text();
+      var coSrc = $(tab).find('.pro-name a').attr('href');
       $('#coImg0').attr('src', coImg);
       $('#coTitle0').html(coTitle);
       $('#coPrice0').html(coPrice);
       $('#coBack0').html('Earn ' + coBack);
+      $('.coSrc0').attr('href', coSrc);
 
       var tab = $(coContainer).find('#tab1 ul.product-layout li.product').first();
       var coImg = $(tab).find('.pro-thumb img').attr('src');
       var coTitle = $(tab).find('.pro-name').text();
       var coPrice = $(tab).find('.price strong').text();
       var coBack = $(tab).find('.rewards strong').text();
+      var coSrc = $(tab).find('.pro-name a').attr('href');
       $('#coImg1').attr('src', coImg);
       $('#coTitle1').html(coTitle);
       $('#coPrice1').html(coPrice);
       $('#coBack1').html('Earn ' + coBack);
+      $('.coSrc1').attr('href', coSrc);
 
       var tab = $(coContainer).find('#tab2 ul.product-layout li.product').first();
       var coImg = $(tab).find('.pro-thumb img').attr('src');
       var coTitle = $(tab).find('.pro-name').text();
       var coPrice = $(tab).find('.price strong').text();
       var coBack = $(tab).find('.rewards strong').text();
+      var coSrc = $(tab).find('.pro-name a').attr('href');
       $('#coImg2').attr('src', coImg);
       $('#coTitle2').html(coTitle);
       $('#coPrice2').html(coPrice);
       $('#coBack2').html('Earn ' + coBack);
+      $('.coSrc2').attr('href', coSrc);
     }
     else {
       $('#clubORow').css('display', 'none');
